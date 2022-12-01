@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'polkAPI'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+//    implementation fileTree(include: ['*.jar'], dir: 'lib')
+
+//    implementation()
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+// https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.70'
+    implementation 'org.apache.directory.studio:org.apache.commons.codec:1.8'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.14.1'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.1'
+    implementation 'net.openhft:zero-allocation-hashing:0.16'
+
+}
+
+test {
+    useJUnitPlatform()
+}
